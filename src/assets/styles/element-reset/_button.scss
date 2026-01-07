@@ -3,6 +3,23 @@
 .el-button {
   --el-font-size-base: 16px;
 
+  &.is-plain {
+    --el-button-bg-color: theme('colors.white');
+    --el-button-hover-bg-color: theme('colors.neutral-200');
+    --el-button-active-bg-color: theme('colors.neutral-200');
+    --el-button-disabled-bg-color: theme('colors.slate-gray-100');
+
+    --el-button-border-color: theme('colors.brand-800');
+    --el-button-hover-border-color: theme('colors.secondary-600');
+    --el-button-active-border-color: theme('colors.secondary-600');
+    --el-button-disabled-border-color: theme('colors.slate-gray-200');
+
+    --el-button-text-color: theme('colors.brand-800');
+    --el-button-hover-text-color: theme('colors.black');
+    --el-button-active-text-color: theme('colors.black');
+    --el-button-disabled-text-color: theme('colors.slate-gray-200');
+  }
+
   &.el-button--primary {
     --el-button-font-weight: 700;
     --el-button-text-color: theme('colors.brand-900');
