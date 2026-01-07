@@ -10,6 +10,7 @@ export const colors = {
 
   // todo: with the following code you can use element colors
   primary: 'var(--el-color-primary)',
+  'primary-900': '#C9B800',
   success: 'var(--el-color-success)',
   warning: 'var(--el-color-warning)',
   danger: 'var(--el-color-danger)',
@@ -19,6 +20,7 @@ export const colors = {
   'brand-900': '#191D22',
 
   'neutral-100': '#F4F8FB',
+  'neutral-200': '#F0F6FA',
   'neutral-400': '#E3EEF6',
 
   'slate-gray-100': '#C5C7CA33',
