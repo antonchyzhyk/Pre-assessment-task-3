@@ -1,0 +1,18 @@
+@use "element-plus/theme-chalk/src/dialog";
+@use "element-plus/theme-chalk/src/overlay";
+
+.el-dialog {
+  --el-dialog-padding-primary: 0;
+
+  &__header {
+    @apply p-[24px];
+  }
+
+  &__body {
+    @apply p-[24px] pt-0;
+  }
+
+  &__footer {
+    @apply p-[24px] pt-0;
+  }
+}
