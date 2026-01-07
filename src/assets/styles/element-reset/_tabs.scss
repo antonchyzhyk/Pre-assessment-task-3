@@ -1,0 +1,28 @@
+@use "element-plus/theme-chalk/src/tabs";
+@use "element-plus/theme-chalk/src/tab-pane";
+
+.el-tabs {
+  --el-color-primary: theme('colors.secondary-600');
+
+  @apply font-medium;
+
+  .is-active {
+    @apply font-bold;
+  }
+
+  &__item {
+    @apply px-3;
+  }
+
+  &__header {
+    @apply mb-0 #{!important};
+  }
+
+  &__active-bar {
+    display: none;
+  }
+
+  &__nav-wrap::after {
+    display: none;
+  }
+}
