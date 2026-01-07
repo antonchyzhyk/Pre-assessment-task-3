@@ -2,6 +2,7 @@
 @use "element-plus/theme-chalk/src/overlay";
 
 .el-dialog {
+  --el-dialog-border-radius: 8px;
   --el-dialog-padding-primary: 0;
 
   &__header {
