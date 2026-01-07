@@ -1,0 +1,43 @@
+@use "element-plus/theme-chalk/src/button";
+
+.el-button {
+  --el-font-size-base: 16px;
+
+  &.el-button--primary {
+    --el-button-font-weight: 700;
+    --el-button-text-color: theme('colors.brand-900');
+    --el-button-hover-bg-color: theme('colors.primary-900');
+    --el-button-hover-border-color: theme('colors.primary-900');
+    --el-button-active-bg-color: theme('colors.primary-900');
+    --el-button-active-border-color: theme('colors.primary-900');
+    --el-button-hover-text-color: theme('colors.brand-900');
+    --el-button-disabled-text-color: theme('colors.brand-900');
+    --el-button-border-radius-base: 8px;
+  }
+
+  @apply outline-none outline ring-0 inline-flex items-center justify-center shadow-none p-[10px] h-[40px] leading-6 transition duration-300 ease-in-out;
+
+  &:hover {
+    @apply outline-none;
+  }
+
+  + .el-button {
+    @apply ml-[12px];
+  }
+
+  + span {
+    @apply ml-[12px];
+  }
+
+  &.el-button--large {
+    @apply h-[42px];
+  }
+
+  .el-icon + span {
+    @apply ml-2;
+  }
+
+  &.is-icon-only {
+    @apply aspect-square gap-0 px-0 #{!important};
+  }
+}
