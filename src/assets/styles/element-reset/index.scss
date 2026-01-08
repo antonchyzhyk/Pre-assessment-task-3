@@ -24,7 +24,10 @@
 @use "element-plus/theme-chalk/src/switch";
 @use "element-plus/theme-chalk/src/overlay";
 @use "element-plus/theme-chalk/src/dialog";
+@use "element-plus/theme-chalk/src/image";
+@use "element-plus/theme-chalk/src/image-viewer";
 
 @import 'button';
 @import 'tabs';
 @import 'dialog';
+@import 'image-viewer';

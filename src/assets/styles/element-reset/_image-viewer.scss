@@ -1,0 +1,29 @@
+@use "element-plus/theme-chalk/src/image-viewer";
+
+.el-image-viewer {
+  &__wrapper {
+    @apply bg-white shadow-none ring-0;
+    .el-image-viewer__mask {
+      @apply bg-white;
+    }
+  }
+
+  &__actions {
+    --el-text-color-regular: transparent;
+    @apply rounded-none p-0 bottom-20 h-[100px];
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    touch-action: pan-x;
+  }
+
+  &__close {
+    --el-text-color-regular: transparent;
+    @apply text-brand-800 right-[10px] top-[10px] sm:right-6 sm:top-6;
+  }
+
+  &__prev,
+  &__next {
+    display: none;
+  }
+}
