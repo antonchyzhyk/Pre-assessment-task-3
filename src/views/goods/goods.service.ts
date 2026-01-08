@@ -1,5 +1,4 @@
 class GoodsService {
-
   async toggleFavorite (productId: string, currentStatus: boolean): Promise<IToggleFavoriteResponse> {
     await new Promise(resolve => setTimeout(resolve, 300))
 
