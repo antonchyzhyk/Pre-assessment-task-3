@@ -3,8 +3,16 @@
     :model-value="isOpen.TestModal"
     :before-close="() => closeModal('TestModal')"
     destroy-on-close
-    class="no-header body-p-0 max-w-[700px]"
+    class="max-w-[800px]"
+    :show-close="false"
   >
+    <template #header>
+      <div class="flex items-center justify-between">
+        <p>Header</p>
+        <span>Close</span>
+      </div>
+    </template>
+
     <div>Test Modal Content</div>
 
     <template #footer>
