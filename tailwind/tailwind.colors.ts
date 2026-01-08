@@ -19,6 +19,8 @@ export const colors = {
   'brand-800': '#21262C',
   'brand-900': '#191D22',
 
+  neutral: 'rgb(244 248 251 / 0.5)',
+  'neutral-25': 'rgb(197 199 202 / 0.25)',
   'neutral-50': 'rgb(244 248 251 / 0.5)',
   'neutral-100': '#F4F8FB',
   'neutral-200': '#F0F6FA',
