@@ -9,8 +9,6 @@
 );
 
 @use "element-plus/theme-chalk/src/base";
-@use "element-plus/theme-chalk/src/button";
-@use "element-plus/theme-chalk/src/badge";
 @use "element-plus/theme-chalk/src/message";
 @use "element-plus/theme-chalk/src/select";
 @use "element-plus/theme-chalk/src/input";
@@ -25,9 +23,10 @@
 @use "element-plus/theme-chalk/src/overlay";
 @use "element-plus/theme-chalk/src/dialog";
 @use "element-plus/theme-chalk/src/image";
-@use "element-plus/theme-chalk/src/image-viewer";
+@use "element-plus/theme-chalk/src/skeleton";
 
 @import 'button';
 @import 'tabs';
 @import 'dialog';
 @import 'image-viewer';
+@import 'badge';
