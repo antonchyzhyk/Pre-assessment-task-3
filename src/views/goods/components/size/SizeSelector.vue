@@ -1,0 +1,85 @@
+<template>
+  <div class="space-y-[6px]">
+    <div class="text-base font-bold text-brand-800">
+      Size:
+      <span v-if="selectedSize" class="font-normal">
+        {{ selectedSize[activeTab] }} {{ activeTab.toUpperCase() }}
+      </span>
+      <span v-else class="text-gray-400 font-normal">
+        select size below
+      </span>
+    </div>
+
+    <el-tabs v-model="activeTab">
+      <el-tab-pane
+        v-for="(tab, name) in tabsConfig"
+        :key="name"
+        :name="name"
+        :label="tab.label"
+      >
+        <template #label>
+          <span class="text-sm font-medium">
+            {{ tab.label }}
+          </span>
+        </template>
+      </el-tab-pane>
+    </el-tabs>
+
+    <div
+      class="grid grid-cols-5 gap-2 sm:gap-[10px]"
+    >
+      <div
+        v-for="size in sizeService.ALL_SNEAKERS_SIZES"
+        :key="size.us"
+        class="w-full"
+      >
+        <SizeButton
+          :label="size[activeTab]"
+          :value="size.us"
+          :is-selected="selectedSize?.us === size.us"
+          :disabled="!isAvailable(size)"
+          @select="handleSizeSelect(size)"
+        />
+      </div>
+    </div>
+
+    <span class="flex justify-end mt-[8px]">
+      <button
+        class="text-sm font-normal text-brand-500"
+        @click="openModal('SizeGuideModal')"
+      >
+        Size Guide
+      </button>
+    </span>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { useModals } from '@/composables/useModals'
+import { sizeService } from '../../size.service'
+
+const props = defineProps<{
+  availableSizes: IShoeSize[]
+}>()
+
+const selectedSize = defineModel<IShoeSize | null>('selectedSize', { required: true })
+
+const { openModal } = useModals()
+
+const tabsConfig: Record<TSizeSystem, { label: string }> = {
+  uk: { label: 'UK' },
+  us: { label: 'US' },
+  eu: { label: 'EU' },
+  cm: { label: 'Foot Length (cm)' }
+}
+
+const activeTab = ref<TSizeSystem>('uk')
+
+const availableUsSizes = computed<number[]>(() => props.availableSizes.map(size => size.us))
+
+const isAvailable = (size: IShoeSize): boolean => availableUsSizes.value.includes(size.us)
+
+function handleSizeSelect (size: IShoeSize) {
+  selectedSize.value = size
+}
+</script>
