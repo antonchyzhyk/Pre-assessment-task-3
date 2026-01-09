@@ -1,0 +1,91 @@
+{
+  "productId": 123,
+  "name": "ASICS GEL-KAYANO 14",
+  "price": {
+    "value": "155.00",
+    "currency": "$"
+  },
+  "images": [
+    "/src/assets/images/shoes/ASIS_GOLD_1.png",
+    "/src/assets/images/shoes/ASIS_GOLD_2.png",
+    "/src/assets/images/shoes/ASIS_GOLD_3.png",
+    "/src/assets/images/shoes/ASIS_GOLD_4.png",
+    "/src/assets/images/shoes/ASIS_GOLD_5.png",
+    "/src/assets/images/shoes/ASIS_GOLD_6.png"
+  ],
+  "colorVariants": [
+    {
+      "color": "Midnight Blue",
+      "thumbnail": "/src/assets/images/shoes/ASIS_BLUE_1.png",
+      "images": [],
+      "inStock": false,
+      "availableSizes": []
+    },
+    {
+      "color": "Black/Pure Silver",
+      "thumbnail": "/src/assets/images/shoes/ASIS_BLACK_1.png",
+      "images": [
+        "/src/assets/images/shoes/ASIS_BLACK_1.png",
+        "/src/assets/images/shoes/ASIS_BLACK_2.png",
+        "/src/assets/images/shoes/ASIS_BLACK_3.png",
+        "/src/assets/images/shoes/ASIS_BLACK_4.png",
+        "/src/assets/images/shoes/ASIS_BLACK_5.png",
+        "/src/assets/images/shoes/ASIS_BLACK_6.png"
+      ],
+      "inStock": true,
+      "availableSizes": [
+        { "us": 7, "uk": 6, "eu": 39, "cm": 24.5 },
+        { "us": 8, "uk": 7, "eu": 40, "cm": 25.5 },
+        { "us": 9, "uk": 8, "eu": 41, "cm": 26.5 },
+        { "us": 10, "uk": 9, "eu": 42.5, "cm": 27.5 },
+        { "us": 11, "uk": 10, "eu": 43.5, "cm": 28.5 },
+        { "us": 12, "uk": 11, "eu": 45, "cm": 29.5 }
+      ]
+    },
+    {
+      "color": "Citrus Yellow",
+      "thumbnail": "/src/assets/images/shoes/ASIS_YELLOW_1.png",
+      "images": [],
+      "inStock": false,
+      "availableSizes": []
+    },
+    {
+      "color": "Cloud White",
+      "thumbnail": "/src/assets/images/shoes/ASIS_WHITE_1.png",
+      "images": [],
+      "inStock": false,
+      "availableSizes": []
+    },
+    {
+      "color": "White/Tai Chi Yellow",
+      "thumbnail": "/src/assets/images/shoes/ASIS_GOLD_1.png",
+      "images": [
+        "/src/assets/images/shoes/ASIS_GOLD_1.png",
+        "/src/assets/images/shoes/ASIS_GOLD_2.png",
+        "/src/assets/images/shoes/ASIS_GOLD_3.png",
+        "/src/assets/images/shoes/ASIS_GOLD_4.png",
+        "/src/assets/images/shoes/ASIS_GOLD_5.png",
+        "/src/assets/images/shoes/ASIS_GOLD_6.png"
+      ],
+      "inStock": true,
+      "availableSizes": [
+        { "us": 7, "uk": 6, "eu": 39, "cm": 24.5 },
+        { "us": 7.5, "uk": 6.5, "eu": 39.5, "cm": 25 },
+        { "us": 8, "uk": 7, "eu": 40, "cm": 25.5 },
+        { "us": 8.5, "uk": 7.5, "eu": 40.5, "cm": 26 },
+        { "us": 9, "uk": 8, "eu": 41, "cm": 26.5 },
+        { "us": 9.5, "uk": 8.5, "eu": 42, "cm": 27 },
+        { "us": 10, "uk": 9, "eu": 42.5, "cm": 27.5 },
+        { "us": 10.5, "uk": 9.5, "eu": 43, "cm": 28 },
+        { "us": 11, "uk": 10, "eu": 43.5, "cm": 28.5 },
+        { "us": 11.5, "uk": 10.5, "eu": 44, "cm": 29 },
+        { "us": 12, "uk": 11, "eu": 45, "cm": 29.5 },
+        { "us": 12.5, "uk": 11.5, "eu": 45.5, "cm": 30 },
+        { "us": 14, "uk": 13, "eu": 47.5, "cm": 31.5 }
+      ]
+    }
+  ],
+  "description": "The GEL-KAYANO 14 sneaker resurfaces with its late 2000s aesthetic as a nod to our storied GEL-KAYANO series. Reinterpreting the shoe`s performance capabilities with updated materials and componentry, this version became the first iteration in the sneaker`s lineage to be designed by someone other than Toshikazu Kayano. Inspired by the original tooling from 2008, this shoe also features GEL technology underfoot for advanced impact absorption.",
+  "details": "Archive-inspired design based on the original 2008 GEL-KAYANO 14 combines a breathable mesh upper with layered synthetic overlays, GEL™ cushioning in the heel and forefoot, a TRUSSTIC™ support system for enhanced stability, a lightweight EVA midsole for everyday comfort, a durable rubber outsole for reliable traction, and ASICS branding on the tongue, heel, and side panels. Inspired by the original tooling from 2008, this shoe also features GEL® technology underfoot for advanced impact absorption.",
+  "isFavorite": false
+}
