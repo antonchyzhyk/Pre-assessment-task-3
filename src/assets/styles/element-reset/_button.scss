@@ -18,6 +18,8 @@
     --el-button-hover-text-color: theme('colors.black');
     --el-button-active-text-color: theme('colors.black');
     --el-button-disabled-text-color: theme('colors.slate-gray-200');
+
+    --el-button-outline-color: theme('colors.brand-800');
   }
 
   &.el-button--primary {
@@ -29,6 +31,7 @@
     --el-button-active-border-color: theme('colors.primary-900');
     --el-button-hover-text-color: theme('colors.brand-900');
     --el-button-disabled-text-color: theme('colors.brand-900');
+    --el-button-outline-color: theme('colors.primary-900');
     --el-button-border-radius-base: 8px;
   }
 
@@ -47,7 +50,7 @@
   }
 
   &.el-button--large {
-    @apply h-[42px];
+    @apply h-[44px];
   }
 
   .el-icon + span {
