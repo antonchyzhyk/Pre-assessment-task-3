@@ -5,11 +5,14 @@
             overflow-hidden flex items-center justify-center cursor-zoom-in transition-all duration-200"
       @click="openPreview"
     >
-      <el-image
-        :src="selectedImage"
-        fit="contain"
-        class="w-full aspect-square flex items-center justify-center pointer-events-none"
-      />
+      <transition name="fade" mode="out-in">
+        <el-image
+          :key="selectedIndex"
+          :src="selectedImage"
+          fit="contain"
+          class="w-full aspect-square flex items-center justify-center pointer-events-none"
+        />
+      </transition>
 
       <div class="absolute top-3 right-3">
         <LikeButton
@@ -107,3 +110,4 @@ function onPreviewSwitch (index: number) {
   mainCarouselRef.value?.scrollIntoView(index)
 }
 </script>
+
