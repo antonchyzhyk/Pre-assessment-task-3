@@ -3,28 +3,22 @@
 
   <template v-else-if="goodsData">
     <div class="flex flex-col lg:items-start xl:flex-row gap-[50px]">
-      <div class="max-w-[690px]">
+      <section class="max-w-[690px]">
         <ImageGallery
           :images="currentImages"
           :is-liked="goodsData.isFavorite"
           :like-loading="favoriteLoading"
           @toggle-like="handleToggleLike"
         />
-      </div>
+      </section>
 
-      <div class="flex-1 text-brand-800">
-        <h1 class="sm:text-[32px] sm:leading-[40px] text-[28px] leading-[36px] font-bold mb-[16px]">
-          {{ goodsData.name }}
-        </h1>
-
-        <p class="flex gap-1 items-center sm:text-2xl text-[22px] leading-[28px] font-bold mb-[36px]">
-          <span>{{ goodsData.price.currency }}</span>
-          {{ goodsData.price.value }}
-        </p>
-
-        <p class="text-base font-normal text-brand-800 mb-[12px]">
-          <span class="font-semibold">Colour:</span> {{ selectedColorName }}
-        </p>
+      <section class="flex-1 text-brand-800">
+        <GoodsMainInfoSection
+          :name="goodsData.name"
+          :price="goodsData.price.value"
+          :currency="goodsData.price.currency"
+          :color="selectedColorName"
+        />
 
         <div class="w-full flex justify-between mb-[24px] flex-wrap sm:gap-3 gap-2">
           <GoodsColorCard
@@ -61,16 +55,16 @@
 
           <CompareButton />
         </div>
-      </div>
+      </section>
     </div>
 
-    <div class="w-full mt-[48px] pb-[100px]">
+    <section class="w-full mt-[48px] pb-[100px]">
       <GoodsInfoCard
         :product-id="goodsData.productId"
         :description="goodsData.description"
         :details="goodsData.details"
       />
-    </div>
+    </section>
 
     <GoodsBottomBar
       v-if="isMobile"
