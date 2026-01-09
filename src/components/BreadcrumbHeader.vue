@@ -14,13 +14,6 @@
           {{ item.label }}
         </router-link>
 
-        <!-- <span
-          v-else
-          class="text-secondary-600 font-semibold"
-        >
-          {{ item.label }}
-        </span> -->
-
         <span
           v-if="index < breadcrumbItems.length - 1"
           class="mx-1 text-slate-gray-200"
