@@ -6,7 +6,11 @@
     :loading
     @click="$emit('add-to-cart')"
   >
-    <el-badge :value="1" :offset="[10, 2]">
+    <el-badge
+      :value="quantity"
+      :offset="[10, 2]"
+      :show-zero="false"
+    >
       Add to Cart
     </el-badge>
   </el-button>
@@ -17,6 +21,7 @@ import IconCart from '~icons/icon/cart'
 
 defineProps<{
   loading: boolean
+  quantity?: number
 }>()
 
 defineEmits(['add-to-cart'])

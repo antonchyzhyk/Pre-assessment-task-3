@@ -4,6 +4,7 @@
       <AddToCartButton
         class="flex-1"
         :loading="addToCartLoading"
+        :quantity="cartQuantity"
         @add-to-cart="$emit('add-to-cart')"
       />
 
@@ -15,6 +16,7 @@
 <script lang="ts" setup>
 defineProps<{
   addToCartLoading: boolean
+  cartQuantity: number
 }>()
 
 defineEmits(['add-to-cart', 'toggle-compare'])

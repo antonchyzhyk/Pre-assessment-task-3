@@ -49,6 +49,7 @@
           <AddToCartButton
             class="flex-1"
             :loading="addToCartLoading"
+            :quantity="currentColorCartQuantity"
             @add-to-cart="handleAddToCart"
           />
 
@@ -73,6 +74,7 @@
 
     <GoodsBottomBar
       v-if="isMobile"
+      :cartQuantity="currentColorCartQuantity"
       :addToCartLoading="addToCartLoading"
       @add-to-cart="handleAddToCart"
       @toggle-compare="handleToggleCompare"
@@ -88,6 +90,7 @@ const { isMobile } = useScreenBreakpoints()
 const loading = ref(true)
 const goodsData = ref<IGoodsResponse | null>(null)
 const selectedColorIndex = ref(0)
+const cartQuantities = ref<Map<string, number>>(new Map())
 
 const favoriteLoading = ref(false)
 const addToCartLoading = ref(false)
@@ -95,6 +98,11 @@ const selectedSize = ref<IShoeSize | null>(null)
 
 const selectedColorName = computed(() => {
   return goodsData.value?.colorVariants[selectedColorIndex.value]?.color ?? ''
+})
+
+const currentColorCartQuantity = computed(() => {
+  const key = selectedColorName.value
+  return cartQuantities.value.get(key) || 0
 })
 
 const currentImages = computed(() => {
@@ -144,6 +152,8 @@ async function handleAddToCart () {
       size: selectedSize.value,
       color: selectedColorName.value
     })
+
+    cartQuantities.value.set(selectedColorName.value, currentColorCartQuantity.value + 1)
 
     ElMessage.success('Added to cart')
   } catch {
