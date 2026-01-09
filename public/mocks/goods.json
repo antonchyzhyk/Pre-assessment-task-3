@@ -6,31 +6,31 @@
     "currency": "$"
   },
   "images": [
-    "/src/assets/images/shoes/ASIS_GOLD_1.png",
-    "/src/assets/images/shoes/ASIS_GOLD_2.png",
-    "/src/assets/images/shoes/ASIS_GOLD_3.png",
-    "/src/assets/images/shoes/ASIS_GOLD_4.png",
-    "/src/assets/images/shoes/ASIS_GOLD_5.png",
-    "/src/assets/images/shoes/ASIS_GOLD_6.png"
+    "/src/assets/images/shoes/ASICS_GOLD_1.png",
+    "/src/assets/images/shoes/ASICS_GOLD_2.png",
+    "/src/assets/images/shoes/ASICS_GOLD_3.png",
+    "/src/assets/images/shoes/ASICS_GOLD_4.png",
+    "/src/assets/images/shoes/ASICS_GOLD_5.png",
+    "/src/assets/images/shoes/ASICS_GOLD_6.png"
   ],
   "colorVariants": [
     {
       "color": "Midnight Blue",
-      "thumbnail": "/src/assets/images/shoes/ASIS_BLUE_1.png",
+      "thumbnail": "/src/assets/images/shoes/ASICS_BLUE_1.png",
       "images": [],
       "inStock": false,
       "availableSizes": []
     },
     {
       "color": "Black/Pure Silver",
-      "thumbnail": "/src/assets/images/shoes/ASIS_BLACK_1.png",
+      "thumbnail": "/src/assets/images/shoes/ASICS_BLACK_1.png",
       "images": [
-        "/src/assets/images/shoes/ASIS_BLACK_1.png",
-        "/src/assets/images/shoes/ASIS_BLACK_2.png",
-        "/src/assets/images/shoes/ASIS_BLACK_3.png",
-        "/src/assets/images/shoes/ASIS_BLACK_4.png",
-        "/src/assets/images/shoes/ASIS_BLACK_5.png",
-        "/src/assets/images/shoes/ASIS_BLACK_6.png"
+        "/src/assets/images/shoes/ASICS_BLACK_1.png",
+        "/src/assets/images/shoes/ASICS_BLACK_2.png",
+        "/src/assets/images/shoes/ASICS_BLACK_3.png",
+        "/src/assets/images/shoes/ASICS_BLACK_4.png",
+        "/src/assets/images/shoes/ASICS_BLACK_5.png",
+        "/src/assets/images/shoes/ASICS_BLACK_6.png"
       ],
       "inStock": true,
       "availableSizes": [
@@ -44,28 +44,28 @@
     },
     {
       "color": "Citrus Yellow",
-      "thumbnail": "/src/assets/images/shoes/ASIS_YELLOW_1.png",
+      "thumbnail": "/src/assets/images/shoes/ASICS_YELLOW_1.png",
       "images": [],
       "inStock": false,
       "availableSizes": []
     },
     {
       "color": "Cloud White",
-      "thumbnail": "/src/assets/images/shoes/ASIS_WHITE_1.png",
+      "thumbnail": "/src/assets/images/shoes/ASICS_WHITE_1.png",
       "images": [],
       "inStock": false,
       "availableSizes": []
     },
     {
       "color": "White/Tai Chi Yellow",
-      "thumbnail": "/src/assets/images/shoes/ASIS_GOLD_1.png",
+      "thumbnail": "/src/assets/images/shoes/ASICS_GOLD_1.png",
       "images": [
-        "/src/assets/images/shoes/ASIS_GOLD_1.png",
-        "/src/assets/images/shoes/ASIS_GOLD_2.png",
-        "/src/assets/images/shoes/ASIS_GOLD_3.png",
-        "/src/assets/images/shoes/ASIS_GOLD_4.png",
-        "/src/assets/images/shoes/ASIS_GOLD_5.png",
-        "/src/assets/images/shoes/ASIS_GOLD_6.png"
+        "/src/assets/images/shoes/ASICS_GOLD_1.png",
+        "/src/assets/images/shoes/ASICS_GOLD_2.png",
+        "/src/assets/images/shoes/ASICS_GOLD_3.png",
+        "/src/assets/images/shoes/ASICS_GOLD_4.png",
+        "/src/assets/images/shoes/ASICS_GOLD_5.png",
+        "/src/assets/images/shoes/ASICS_GOLD_6.png"
       ],
       "inStock": true,
       "availableSizes": [
