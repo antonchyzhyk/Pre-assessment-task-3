@@ -1,103 +1,178 @@
 <template>
-  <div class="p-4 md:p-8 max-w-4xl mx-auto">
-    <div class="max-w-[700px]">
-      <ImageGallery
-        :images="shoeImages"
-        :is-liked="isFavorite"
-        :like-loading="favoriteLoading"
-        @toggle-like="handleToggleLike"
+  <GoodsSkeleton v-if="loading" />
+
+  <template v-else-if="goodsData">
+    <div class="flex flex-col lg:items-start xl:flex-row gap-[50px]">
+      <div class="max-w-[690px]">
+        <ImageGallery
+          :images="currentImages"
+          :is-liked="goodsData.isFavorite"
+          :like-loading="favoriteLoading"
+          @toggle-like="handleToggleLike"
+        />
+      </div>
+
+      <div class="flex-1 text-brand-800">
+        <h1 class="sm:text-[32px] sm:leading-[40px] text-[28px] leading-[36px] font-bold mb-[16px]">
+          {{ goodsData.name }}
+        </h1>
+
+        <p class="flex gap-1 items-center sm:text-2xl text-[22px] leading-[28px] font-bold mb-[36px]">
+          <span>{{ goodsData.price.currency }}</span>
+          {{ goodsData.price.value }}
+        </p>
+
+        <p class="text-base font-normal text-brand-800 mb-[12px]">
+          <span class="font-semibold">Colour:</span> {{ selectedColorName }}
+        </p>
+
+        <div class="w-full flex justify-between mb-[24px] flex-wrap sm:gap-3 gap-2">
+          <GoodsColorCard
+            v-for="(variant, index) in goodsData.colorVariants"
+            :key="index"
+            :thumbnail="variant.thumbnail"
+            :is-selected="selectedColorIndex === index"
+            :is-in-stock="variant.inStock"
+            @select="handleColorSelect(index)"
+          />
+        </div>
+
+        <SizeSelector
+          v-model:selected-size="selectedSize"
+          :availableSizes="currentAvailableSizes"
+        />
+
+        <div
+          v-if="!isMobile"
+          class="flex mt-[24px]"
+        >
+          <AddToCartButton
+            class="flex-1"
+            :loading="addToCartLoading"
+            @add-to-cart="handleAddToCart"
+          />
+
+          <LikeButton
+            :is-liked="goodsData.isFavorite"
+            :loading="favoriteLoading"
+            @toggle-like="handleToggleLike"
+          />
+
+          <CompareButton />
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full mt-[48px] pb-[100px]">
+      <GoodsInfoCard
+        :product-id="goodsData.productId"
+        :description="goodsData.description"
+        :details="goodsData.details"
       />
     </div>
 
-    <div class="mt-8 border-t border-gray-200 pt-8">
-      <h2 class="text-lg font-semibold text-brand-800 mb-4">Other Components</h2>
-
-      <el-button type="primary" :icon="IconCart" @click="openModal('TestModal')">
-        Chinazes
-      </el-button>
-
-      <el-button size="large" type="primary">Click me</el-button>
-
-      <el-button class="is-icon-only" type="primary" :icon="IconCart" />
-
-      <el-tabs v-model="activeTab" class="mt-6 text-[16px]">
-        <el-tab-pane
-          v-for="(tab, name) in tabsConfig"
-          :key="name"
-          :name="name"
-          :label="tab.label"
-        >
-          <template #label>
-            <span class="text-[16px]">
-              {{ tab.label }}
-            </span>
-          </template>
-        </el-tab-pane>
-      </el-tabs>
-
-      <div v-if="activeTab === EHrDocumentPersonnelTabs.FOLDERS" class="mt-4">
-        Here is the content of the folders tab
-      </div>
-
-      <div v-if="activeTab === EHrDocumentPersonnelTabs.LIST_VIEW" class="mt-4">
-        Here is the content of the list view tab
-      </div>
-    </div>
-  </div>
+    <GoodsBottomBar
+      v-if="isMobile"
+      :addToCartLoading="addToCartLoading"
+      @add-to-cart="handleAddToCart"
+      @toggle-compare="handleToggleCompare"
+    />
+  </template>
 </template>
 
 <script lang="ts" setup>
 import { ElMessage } from 'element-plus'
-import IconCart from '~icons/icon/cart'
-import { goodsService } from './goods.service'
 
-const { openModal } = useModals()
+const { isMobile } = useScreenBreakpoints()
 
-// Mock product ID for demo purposes
-const productId = 'shoe-asis-gold-001'
+const loading = ref(true)
+const goodsData = ref<IGoodsResponse | null>(null)
+const selectedColorIndex = ref(0)
 
-const shoeImages = [
-  '/src/assets/images/shoes/ASIS_GOLD_1.png',
-  '/src/assets/images/shoes/ASIS_GOLD_2.png',
-  '/src/assets/images/shoes/ASIS_GOLD_3.png',
-  '/src/assets/images/shoes/ASIS_GOLD_4.png',
-  '/src/assets/images/shoes/ASIS_GOLD_5.png',
-  '/src/assets/images/shoes/ASIS_GOLD_6.png'
-]
-
-const isFavorite = ref(false)
 const favoriteLoading = ref(false)
+const addToCartLoading = ref(false)
+const selectedSize = ref<IShoeSize | null>(null)
+
+const selectedColorName = computed(() => {
+  return goodsData.value?.colorVariants[selectedColorIndex.value]?.color ?? ''
+})
+
+const currentImages = computed(() => {
+  const variant = goodsData.value?.colorVariants[selectedColorIndex.value]
+  return variant?.images.length ? variant.images : goodsData.value?.images ?? []
+})
+
+const currentAvailableSizes = computed(() => {
+  return goodsData.value?.colorVariants[selectedColorIndex.value]?.availableSizes ?? []
+})
+
+function handleColorSelect (index: number) {
+  selectedColorIndex.value = index
+  selectedSize.value = null
+}
 
 async function handleToggleLike () {
-  if (favoriteLoading.value) return
+  if (favoriteLoading.value || !goodsData.value) return
 
   favoriteLoading.value = true
 
   try {
-    const response = await goodsService.toggleFavorite(productId, isFavorite.value)
-    isFavorite.value = response.isFavorite
+    const response = await goodsService.toggleFavorite(goodsData.value.productId, goodsData.value.isFavorite)
+    goodsData.value.isFavorite = response.isFavorite
 
     ElMessage.success(response.isFavorite ? 'Added to favorites' : 'Removed from favorites')
-  } catch (error) {
-    ElMessage.error(error instanceof Error ? error.message : 'Failed to update favorites')
+  } catch {
+    ElMessage.error('Failed to update favorites')
   } finally {
     favoriteLoading.value = false
   }
 }
 
-enum EHrDocumentPersonnelTabs {
-  FOLDERS = 'folders',
-  LIST_VIEW = 'list-view'
-}
+async function handleAddToCart () {
+  if (!selectedSize.value) {
+    ElMessage.info('Please select a size')
+    return
+  }
 
-const activeTab = ref(EHrDocumentPersonnelTabs.FOLDERS)
+  if (!goodsData.value) return
 
-const tabsConfig = {
-  [EHrDocumentPersonnelTabs.FOLDERS]: {
-    label: 'Folders'
-  },
-  [EHrDocumentPersonnelTabs.LIST_VIEW]: {
-    label: 'List View'
+  try {
+    addToCartLoading.value = true
+
+    await goodsService.addToCart({
+      productId: goodsData.value.productId,
+      size: selectedSize.value,
+      color: selectedColorName.value
+    })
+
+    ElMessage.success('Added to cart')
+  } catch {
+    ElMessage.error('Failed to add to cart')
+  } finally {
+    addToCartLoading.value = false
   }
 }
+
+function handleToggleCompare () {
+  console.log('toggle compare')
+}
+
+async function fetchGoodsData () {
+  loading.value = true
+
+  try {
+    goodsData.value = await goodsService.getGoods()
+
+    const firstInStockIndex = goodsData.value.colorVariants.findIndex(v => v.inStock)
+    selectedColorIndex.value = firstInStockIndex !== -1 ? firstInStockIndex : 0
+  } catch {
+    ElMessage.error('Failed to load product data')
+  } finally {
+    loading.value = false
+  }
+}
+
+onMounted(() => {
+  fetchGoodsData()
+})
 </script>
