@@ -53,7 +53,10 @@
             @toggle-like="handleToggleLike"
           />
 
-          <CompareButton />
+          <CompareButton
+            class="ml-3"
+            @toggle-compare="handleToggleCompare"
+          />
         </div>
       </section>
     </div>
