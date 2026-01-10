@@ -45,7 +45,7 @@
 
     <span class="flex justify-end mt-[8px]">
       <button
-        class="text-sm font-normal text-brand-500"
+        class="text-sm font-normal text-brand-500 hover:text-secondary-600"
         @click="openModal('SizeGuideModal')"
       >
         Size Guide
