@@ -6,7 +6,7 @@
     :class="{
       'border-[1.5px] border-secondary-600 bg-neutral-200': isSelected,
       'opacity-50 cursor-not-allowed': !isInStock,
-      'hover:border-neutral-300 cursor-pointer': isInStock && !isSelected
+      'hover:border-secondary-600 hover:bg-neutral-200 cursor-pointer': isInStock && !isSelected
     }"
     :disabled="!isInStock"
     @click="handleClick"
