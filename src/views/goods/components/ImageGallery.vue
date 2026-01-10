@@ -7,7 +7,7 @@
     >
       <transition name="fade" mode="out-in">
         <el-image
-          :key="selectedIndex"
+          :key="`${imagesKeyForTransition}-${selectedIndex}`"
           :src="selectedImage"
           fit="contain"
           class="w-full aspect-square flex items-center justify-center pointer-events-none"
@@ -24,12 +24,16 @@
       </div>
     </div>
 
-    <ThumbnailCarousel
-      ref="mainCarouselRef"
-      :images="images"
-      :selected-index="selectedIndex"
-      @select="selectImage"
-    />
+    <transition name="fade" mode="out-in">
+      <div :key="imagesKeyForTransition" class="w-full">
+        <ThumbnailCarousel
+          ref="mainCarouselRef"
+          :images="images"
+          :selected-index="selectedIndex"
+          @select="selectImage"
+        />
+      </div>
+    </transition>
 
     <el-image-viewer
       v-if="showPreview"
@@ -81,6 +85,7 @@ const selectedIndex = ref(props.initialIndex)
 const showPreview = ref(false)
 
 const imageViewerRef = ref<ImageViewerInstance | null>(null)
+const imagesKeyForTransition = computed(() => props.images.join('|'))
 
 const selectedImage = computed(() => props.images[selectedIndex.value])
 
@@ -109,5 +114,9 @@ function onPreviewSwitch (index: number) {
   toolbarCarouselRef.value?.scrollIntoView(index)
   mainCarouselRef.value?.scrollIntoView(index)
 }
+
+onMounted(() => {
+  console.log('ImageGallery mounted')
+})
 </script>
 
