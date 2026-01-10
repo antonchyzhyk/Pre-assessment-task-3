@@ -35,13 +35,18 @@
           :key="size.us"
           class="w-full"
         >
-          <SizeButton
-            :label="size[activeTab]"
-            :value="size.us"
-            :is-selected="selectedSize?.us === size.us"
-            :disabled="!isSizeInStock(size)"
-            @select="handleSizeSelect(size)"
-          />
+          <Compute
+            #="{ data: isInStock }"
+            :data="isSizeInStock(size)"
+          >
+            <SizeButton
+              :label="size[activeTab]"
+              :value="size.us"
+              :is-selected="selectedSize?.us === size.us"
+              :disabled="!isInStock"
+              @select="handleSizeSelect(size)"
+            />
+          </compute>
         </div>
       </div>
     </transition>
