@@ -1,8 +1,11 @@
 <template>
   <el-button
     plain
-    class="size-button w-full rounded-[8px]"
-    :class="{ 'is-selected': isSelected }"
+    class="size-button"
+    :class="{
+      'is-selected': isSelected,
+      'opacity-50': disabled
+    }"
     :disabled="disabled"
     @click="handleClick"
   >
@@ -34,13 +37,9 @@ function handleClick () {
 <style lang="scss" scoped>
 .size-button {
   &.is-selected {
-    --el-button-bg-color: theme('colors.neutral-200');
-    --el-button-border-color: theme('colors.secondary-600');
-    --el-button-text-color: theme('colors.brand-800');
-    --el-button-hover-bg-color: theme('colors.neutral-200');
-    --el-button-hover-border-color: theme('colors.secondary-600');
-
-    @apply border-[1.5px] text-black;
+    @apply bg-neutral-200 border-secondary-600 text-black border-[1.5px]
+     hover:bg-neutral-200 hover:border-secondary-600;
   }
 }
 </style>
+

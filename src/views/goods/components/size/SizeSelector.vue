@@ -40,6 +40,7 @@
             :data="isSizeInStock(size)"
           >
             <SizeButton
+              class="w-full"
               :label="size[activeTab]"
               :value="size.us"
               :is-selected="selectedSize?.us === size.us"
