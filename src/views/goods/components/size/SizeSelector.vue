@@ -25,23 +25,26 @@
       </el-tab-pane>
     </el-tabs>
 
-    <div
-      class="grid grid-cols-5 gap-2 sm:gap-[10px]"
-    >
+    <transition name="fade" mode="out-in">
       <div
-        v-for="size in sizeService.ALL_SNEAKERS_SIZES"
-        :key="size.us"
-        class="w-full"
+        :key="activeTab"
+        class="grid grid-cols-5 gap-2 sm:gap-[10px]"
       >
-        <SizeButton
-          :label="size[activeTab]"
-          :value="size.us"
-          :is-selected="selectedSize?.us === size.us"
-          :disabled="!isAvailable(size)"
-          @select="handleSizeSelect(size)"
-        />
+        <div
+          v-for="size in sizeService.ALL_SNEAKERS_SIZES"
+          :key="size.us"
+          class="w-full"
+        >
+          <SizeButton
+            :label="size[activeTab]"
+            :value="size.us"
+            :is-selected="selectedSize?.us === size.us"
+            :disabled="!isSizeInStock(size)"
+            @select="handleSizeSelect(size)"
+          />
+        </div>
       </div>
-    </div>
+    </transition>
 
     <span class="flex justify-end mt-[8px]">
       <button
@@ -77,7 +80,9 @@ const activeTab = ref<TSizeSystem>('uk')
 
 const availableUsSizes = computed<number[]>(() => props.availableSizes.map(size => size.us))
 
-const isAvailable = (size: IShoeSize): boolean => availableUsSizes.value.includes(size.us)
+function isSizeInStock (size: IShoeSize) {
+  return availableUsSizes.value.includes(size.us)
+}
 
 function handleSizeSelect (size: IShoeSize) {
   selectedSize.value = size
