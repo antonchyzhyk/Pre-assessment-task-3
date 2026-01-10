@@ -37,7 +37,7 @@
       :url-list="images"
       :initial-index="selectedIndex"
       :zoom-rate="1.2"
-      :max-scale="5"
+      :max-scale="2"
       :min-scale="0.5"
       @close="closePreview"
       @switch="onPreviewSwitch"
