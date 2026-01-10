@@ -2,8 +2,8 @@
   <GoodsSkeleton v-if="loading" />
 
   <template v-else-if="goodsData">
-    <div class="flex flex-col lg:items-start xl:flex-row gap-[50px]">
-      <section class="max-w-[690px]">
+    <div class="flex flex-col items-center xl:flex-row gap-[50px]">
+      <section class="xl:max-w-[690px] w-full mx-auto">
         <ImageGallery
           :images="currentImages"
           :is-liked="goodsData.isFavorite"
@@ -12,7 +12,7 @@
         />
       </section>
 
-      <section class="flex-1 text-brand-800">
+      <section class="w-full xl:max-w-[690px] mx-auto lg:max-w-none xl:flex-1 text-brand-800">
         <GoodsMainInfoSection
           :name="goodsData.name"
           :price="goodsData.price.value"
@@ -21,7 +21,7 @@
         />
 
         <div
-          class="w-full flex justify-between lg:justify-start xxl:justify-between mb-[24px] flex-wrap sm:gap-3 gap-2"
+          class="w-full flex justify-between sm:justify-start xxl:justify-between mb-[24px] flex-wrap sm:gap-3 gap-2"
         >
           <GoodsColorCard
             v-for="(variant, index) in goodsData.colorVariants"
