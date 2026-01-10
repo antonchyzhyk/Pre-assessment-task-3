@@ -27,7 +27,10 @@
         :details="details"
       />
 
-      <GoodsInfoShipping v-if="activeTab === 'shipping'" />
+      <GoodsInfoShipping
+        v-if="activeTab === 'shipping'"
+        :shipping-information="shippingInformation"
+      />
     </div>
   </div>
 </template>
@@ -36,6 +39,7 @@
 defineProps<{
   description: string
   details: IGoodsDetails[]
+  shippingInformation: string
 }>()
 
 const activeTab = ref('description')

@@ -66,6 +66,7 @@
         :product-id="goodsData.productId"
         :description="goodsData.description"
         :details="goodsData.details"
+        :shipping-information="goodsData.shippingInformation"
       />
     </section>
 

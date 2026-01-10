@@ -27,5 +27,6 @@ interface IGoodsResponse {
   colorVariants: IGoodsColorVariant[]
   description: string
   details: IGoodsDetails[]
+  shippingInformation: string
   isFavorite: boolean
 }
