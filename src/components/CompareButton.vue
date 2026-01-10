@@ -1,6 +1,6 @@
 <template>
   <button
-    class="h-[44px] w-[44px] aspect-square hover:border border-brand-800 rounded-lg"
+    class="h-[44px] w-[44px] aspect-square rounded-lg hover:text-secondary-600 text-brand-800"
     @click="$emit('toggle-compare')"
   >
     <IconScales />

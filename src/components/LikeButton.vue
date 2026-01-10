@@ -4,7 +4,7 @@
     :icon="IconLike"
     :loading="loading"
     :class="{ 'is-liked': isLiked }"
-    class="like-button h-[44px] aspect-square border-brand-800"
+    class="like-button h-[44px] aspect-square border-brand-800 hover:text-secondary-600 text-brand-800"
     @click.stop="$emit('toggle-like')"
   />
 </template>
@@ -27,16 +27,7 @@ defineEmits(['toggle-like'])
 .like-button {
 
   &.is-liked {
-    @apply border-brand-800;
-    :deep(svg path) {
-      fill: var(--el-color-danger);
-    }
-  }
-
-  &:not(.is-liked) {
-    :deep(svg path) {
-      fill: currentColor;
-    }
+    @apply border-brand-800 text-danger;
   }
 }
 </style>
