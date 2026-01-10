@@ -26,6 +26,7 @@ export const colors = {
   'neutral-200': '#F0F6FA',
   'neutral-400': '#E3EEF6',
 
+  'slate-gray-50': '#C5C7CA40',
   'slate-gray-100': '#C5C7CA33',
   'slate-gray-200': '#93989C',
 
