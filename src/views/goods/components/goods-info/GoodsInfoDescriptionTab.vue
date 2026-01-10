@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[800px]">
+  <div>
     <p class="text-brand-800 text-base font-normal">
       {{ description.length ? description : 'There is no description for this product.' }}
     </p>

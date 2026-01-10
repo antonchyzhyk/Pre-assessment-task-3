@@ -16,7 +16,7 @@
       </el-tabs>
     </div>
 
-    <div class="p-[24px]">
+    <div class="p-[24px] max-w-[800px]">
       <GoodsInfoDescriptionTab
         v-if="activeTab === 'description'"
         :description="description"
