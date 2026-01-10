@@ -114,9 +114,5 @@ function onPreviewSwitch (index: number) {
   toolbarCarouselRef.value?.scrollIntoView(index)
   mainCarouselRef.value?.scrollIntoView(index)
 }
-
-onMounted(() => {
-  console.log('ImageGallery mounted')
-})
 </script>
 
