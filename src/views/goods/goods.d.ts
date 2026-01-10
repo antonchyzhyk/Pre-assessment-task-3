@@ -19,7 +19,7 @@ interface IGoodsDetails {
   subtitle?: string
 }
 
-interface IGoodsResponse {
+interface IGoods {
   productId: number
   name: string
   price: IGoodsPrice

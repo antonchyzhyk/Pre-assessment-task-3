@@ -88,7 +88,7 @@ import { ElMessage } from 'element-plus'
 const { isMobile } = useScreenBreakpoints()
 
 const loading = ref(true)
-const goodsData = ref<IGoodsResponse | null>(null)
+const goodsData = ref<IGoods | null>(null)
 const selectedColorIndex = ref(0)
 const cartQuantities = ref<Map<string, number>>(new Map())
 

@@ -1,5 +1,5 @@
 class GoodsService {
-  async getGoods (): Promise<IGoodsResponse> {
+  async getGoods (): Promise<IGoods> {
     await new Promise(resolve => setTimeout(resolve, 500))
     const response = await fetch('/mocks/goods.json')
     return response.json()
