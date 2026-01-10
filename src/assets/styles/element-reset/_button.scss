@@ -2,6 +2,7 @@
 
 .el-button {
   --el-font-size-base: 16px;
+  --el-border-radius-base: 8px;
 
   &.is-plain {
     --el-button-bg-color: theme('colors.white');
@@ -32,7 +33,6 @@
     --el-button-hover-text-color: theme('colors.brand-900');
     --el-button-disabled-text-color: theme('colors.brand-900');
     --el-button-outline-color: theme('colors.primary-900');
-    --el-button-border-radius-base: 8px;
   }
 
   @apply outline-none outline ring-0 inline-flex items-center justify-center shadow-none p-[10px] h-[40px] leading-6 transition duration-300 ease-in-out;
