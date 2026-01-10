@@ -86,6 +86,21 @@
     }
   ],
   "description": "The GEL-KAYANO 14 sneaker resurfaces with its late 2000s aesthetic as a nod to our storied GEL-KAYANO series. Reinterpreting the shoe`s performance capabilities with updated materials and componentry, this version became the first iteration in the sneaker`s lineage to be designed by someone other than Toshikazu Kayano. Inspired by the original tooling from 2008, this shoe also features GEL technology underfoot for advanced impact absorption.",
-  "details": "Archive-inspired design based on the original 2008 GEL-KAYANO 14 combines a breathable mesh upper with layered synthetic overlays, GEL™ cushioning in the heel and forefoot, a TRUSSTIC™ support system for enhanced stability, a lightweight EVA midsole for everyday comfort, a durable rubber outsole for reliable traction, and ASICS branding on the tongue, heel, and side panels. Inspired by the original tooling from 2008, this shoe also features GEL® technology underfoot for advanced impact absorption.",
+  "details": [
+    {
+      "type": "title-with-subtitle",
+      "title": "Original inspired tooling",
+      "subtitle": "2000s design language"
+    },
+    {
+      "type": "title-with-subtitle",
+      "title": "GEL technology cushioning provides excellent shock absorption",
+      "subtitle": "TRUSSTIC support system"
+    },
+    {
+      "type": "paragraph",
+      "title": "The sockliner is produced with the solution dyeing process that reduces water usage by approximately 33% and carbon emissions by approximately 45% compared to the conventional dyeing technology"
+    }
+  ],
   "isFavorite": false
 }

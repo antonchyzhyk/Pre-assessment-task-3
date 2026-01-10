@@ -11,6 +11,14 @@ interface IGoodsPrice {
   currency: string
 }
 
+type TGoodsDetailsType = 'title-with-subtitle' | 'paragraph'
+
+interface IGoodsDetails {
+  type: TGoodsDetailsType
+  title: string
+  subtitle?: string
+}
+
 interface IGoodsResponse {
   productId: number
   name: string
@@ -18,6 +26,6 @@ interface IGoodsResponse {
   images: string[]
   colorVariants: IGoodsColorVariant[]
   description: string
-  details: string
+  details: IGoodsDetails[]
   isFavorite: boolean
 }

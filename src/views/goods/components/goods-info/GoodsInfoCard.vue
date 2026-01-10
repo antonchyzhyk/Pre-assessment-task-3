@@ -35,7 +35,7 @@
 <script lang="ts" setup>
 defineProps<{
   description: string
-  details: string
+  details: IGoodsDetails[]
 }>()
 
 const activeTab = ref('description')
