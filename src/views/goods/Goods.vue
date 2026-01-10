@@ -20,7 +20,9 @@
           :color="selectedColorName"
         />
 
-        <div class="w-full flex justify-between mb-[24px] flex-wrap sm:gap-3 gap-2">
+        <div
+          class="w-full flex justify-between lg:justify-start xxl:justify-between mb-[24px] flex-wrap sm:gap-3 gap-2"
+        >
           <GoodsColorCard
             v-for="(variant, index) in goodsData.colorVariants"
             :key="index"
