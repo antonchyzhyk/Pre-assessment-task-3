@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-[6px]">
+  <div class="space-y-[8px]">
     <div class="text-base font-bold text-brand-800">
       Size:
       <span v-if="selectedSize" class="font-normal">
@@ -10,7 +10,7 @@
       </span>
     </div>
 
-    <el-tabs v-model="activeTab">
+    <el-tabs v-model="activeTab" class="size-tabs">
       <el-tab-pane
         v-for="(tab, name) in tabsConfig"
         :key="name"
@@ -57,7 +57,7 @@
         class="text-sm font-normal text-brand-500 hover:text-secondary-600"
         @click="openModal('SizeGuideModal')"
       >
-        Size Guide
+        Size guide
       </button>
     </span>
   </div>
@@ -94,3 +94,17 @@ function handleSizeSelect (size: IShoeSize) {
   selectedSize.value = size
 }
 </script>
+
+<style scoped lang="scss">
+.size-tabs :deep(.el-tabs__header) {
+  @apply h-5 #{!important};
+}
+
+.size-tabs :deep(.el-tabs__item) {
+  @apply px-[4px] tracking-[0.25px];
+
+  &.is-active {
+    @apply font-semibold;
+  }
+}
+</style>
