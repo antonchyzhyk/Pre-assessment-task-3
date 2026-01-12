@@ -10,6 +10,7 @@ export default {
     colors,
     extend: {
       screens: {
+        xxs: '380px',
         xxl: '1440px'
       }
     }

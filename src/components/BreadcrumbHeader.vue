@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ol class="flex items-center text-sm font-normal tracking-[0.25px]">
+    <ol class="flex items-center text-[12px] xxs:text-sm font-normal tracking-[0.25px]">
       <li
         v-for="(item, index) in breadcrumbItems"
         :key="index"
