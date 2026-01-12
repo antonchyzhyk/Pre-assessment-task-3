@@ -8,7 +8,7 @@
   >
     <button
       type="button"
-      class="relative bg-neutral border border-neutral-100 rounded-lg p-[16px] sm:w-[100px]
+      class="relative bg-neutral border border-neutral-100 rounded-lg p-[12px] sm:w-[100px]
              sm:h-[70px] w-[65px] h-[60px] transition-all group overflow-hidden"
       :class="{
         'border-[1.5px] border-secondary-600 bg-neutral-200': isSelected,

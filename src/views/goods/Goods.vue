@@ -2,7 +2,7 @@
   <GoodsSkeleton v-if="loading" />
 
   <template v-else-if="goodsData">
-    <div class="flex flex-col items-center xl:flex-row gap-[50px]">
+    <div class="flex flex-col items-center xl:items-start xl:flex-row gap-[50px]">
       <section class="xl:max-w-[690px] w-full mx-auto">
         <ImageGallery
           :images="currentImages"
@@ -40,7 +40,7 @@
 
         <div
           v-if="!isMobile"
-          class="flex mt-[24px]"
+          class="flex mt-[36px]"
         >
           <AddToCartButton
             class="flex-1"
