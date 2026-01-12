@@ -104,7 +104,9 @@ function handleSizeSelect (size: IShoeSize) {
   @apply px-[4px] tracking-[0.25px];
 
   &.is-active {
-    @apply font-semibold;
+    span {
+      @apply font-semibold #{!important};
+    }
   }
 }
 </style>
