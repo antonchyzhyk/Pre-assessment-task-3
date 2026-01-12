@@ -1,9 +1,9 @@
 <template>
-  <h1 class="sm:text-[32px] sm:leading-[40px] text-[28px] leading-[36px] font-bold mb-[16px]">
+  <h1 class="sm:text-[32px] sm:leading-[40px] text-[28px] leading-[36px] font-bold xl:mb-[16px] mb-[8px]">
     {{ name }}
   </h1>
 
-  <p class="flex gap-1 items-center sm:text-2xl text-[22px] leading-[28px] font-bold mb-[36px]">
+  <p class="flex gap-1 items-center sm:text-2xl text-[22px] leading-[28px] font-bold xl:mb-[36px] mb-[24px]">
     <span>{{ currency }}</span>
     {{ price }}
   </p>

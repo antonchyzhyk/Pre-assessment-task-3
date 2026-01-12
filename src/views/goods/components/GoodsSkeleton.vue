@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col lg:items-start xl:flex-row gap-[50px]">
+  <div class="flex flex-col lg:items-start xl:flex-row xl:gap-[50px] gap-[24px]">
     <div class="max-w-[690px] w-full">
       <el-skeleton animated>
         <template #template>

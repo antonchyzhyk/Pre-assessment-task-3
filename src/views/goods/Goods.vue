@@ -2,7 +2,7 @@
   <GoodsSkeleton v-if="loading" />
 
   <template v-else-if="goodsData">
-    <div class="flex flex-col items-center xl:items-start xl:flex-row gap-[50px]">
+    <div class="flex flex-col items-center xl:items-start xl:flex-row xl:gap-[50px] gap-[24px]">
       <section class="xl:max-w-[690px] w-full mx-auto">
         <ImageGallery
           :images="currentImages"
