@@ -164,7 +164,7 @@ async function handleAddToCart () {
 }
 
 function handleToggleCompare () {
-  console.log('toggle compare')
+  ElMessage.info('This feature is not available yet')
 }
 
 async function fetchGoodsData () {
