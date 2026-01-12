@@ -1,9 +1,9 @@
 <template>
   <button
-    class="h-[44px] w-[44px] aspect-square rounded-lg hover:text-secondary-600 text-brand-800"
+    class="h-[44px] w-[44px] aspect-square text-[24px] rounded-lg hover:text-secondary-600 text-brand-800"
     @click="$emit('toggle-compare')"
   >
-    <IconScales />
+    <IconScales class="w-[24px] h-[24px]" />
   </button>
 </template>
 

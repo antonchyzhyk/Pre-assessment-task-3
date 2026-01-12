@@ -4,7 +4,7 @@
     :icon="IconLike"
     :loading="loading"
     :class="{ 'is-liked': isLiked }"
-    class="like-button h-[44px] aspect-square border-brand-800 hover:text-secondary-600 text-brand-800"
+    class="like-button h-[44px] aspect-square text-[24px] border-brand-800 hover:text-secondary-600 text-brand-800"
     @click.stop="$emit('toggle-like')"
   />
 </template>
