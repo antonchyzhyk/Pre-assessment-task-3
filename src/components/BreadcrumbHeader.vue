@@ -32,7 +32,7 @@ const breadcrumbItems = [
     path: '/'
   },
   {
-    label: 'Unisex Shoe',
+    label: 'Unisex Shoes',
     path: '/unisex-shoes'
   },
   {
