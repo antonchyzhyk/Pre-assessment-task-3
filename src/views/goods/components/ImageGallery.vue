@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-4">
     <div
-      class="relative bg-neutral-50 border border-neutral-100 rounded-xl
+      class="relative bg-neutral-50 border border-neutral-100 rounded-xl aspect-square
             overflow-hidden flex items-center justify-center cursor-zoom-in transition-all duration-200"
       @click="openPreview"
     >
@@ -10,7 +10,7 @@
           :key="`${imagesKeyForTransition}-${selectedIndex}`"
           :src="selectedImage"
           fit="contain"
-          class="w-full aspect-square flex items-center justify-center pointer-events-none"
+          class="max-w-[645px] max-h-[325px] flex items-center justify-center px-[16px] py-[18px] sm:p-0"
         />
       </transition>
 
