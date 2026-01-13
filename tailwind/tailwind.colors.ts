@@ -8,7 +8,6 @@ export const colors = {
   green: twColors.green,
   orange: twColors.orange,
 
-  // todo: with the following code you can use element colors
   primary: 'var(--el-color-primary)',
   'primary-900': '#C9B800',
   success: 'var(--el-color-success)',
