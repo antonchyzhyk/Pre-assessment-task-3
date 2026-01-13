@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-4">
     <div
-      class="relative bg-neutral-50 border border-neutral-100 rounded-xl aspect-square
+      class="relative bg-neutral border border-neutral-100 rounded-xl aspect-square
             overflow-hidden flex items-center justify-center cursor-zoom-in transition-all duration-200"
       @click="openPreview"
     >

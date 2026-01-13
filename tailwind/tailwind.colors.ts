@@ -20,7 +20,6 @@ export const colors = {
   'brand-900': '#191D22',
 
   neutral: '#F4F8FB80',
-  'neutral-50': '#F4F8FB80',
   'neutral-100': '#F4F8FB',
   'neutral-200': '#F0F6FA',
   'neutral-400': '#E3EEF6',
