@@ -64,20 +64,18 @@ defineExpose({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .carousel {
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x;
-}
 
-@media (max-width: 768px) {
-  .carousel {
+  @media (max-width: 768px) {
     scrollbar-width: none;
     -ms-overflow-style: none;
-  }
 
-  .carousel::-webkit-scrollbar {
-    display: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 </style>
