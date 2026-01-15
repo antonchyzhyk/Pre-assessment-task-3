@@ -13,7 +13,7 @@
       </div>
 
       <div class="w-full xl:max-w-[690px] mx-auto lg:max-w-none xl:flex-1 text-brand-800">
-        <GoodsMainInfoSection
+        <GoodsMainDetailsSection
           :name="goodsData.name"
           :price="goodsData.price.value"
           :currency="goodsData.price.currency"
