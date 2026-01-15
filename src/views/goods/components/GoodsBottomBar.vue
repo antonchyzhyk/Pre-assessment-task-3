@@ -8,7 +8,7 @@
         @add-to-cart="$emit('add-to-cart')"
       />
 
-      <CompareButton @toggle-compare="$emit('toggle-compare')" />
+      <GoodsCompareButton @toggle-compare="$emit('toggle-compare')" />
     </div>
   </div>
 </template>

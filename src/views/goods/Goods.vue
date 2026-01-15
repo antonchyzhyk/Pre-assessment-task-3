@@ -4,7 +4,7 @@
   <template v-else-if="goodsData">
     <section class="flex flex-col items-center xl:items-start xl:flex-row xl:gap-[50px] gap-[24px]">
       <div class="xl:max-w-[690px] w-full mx-auto">
-        <ImageGallery
+        <GoodsImageGallery
           :images="currentImages"
           :is-liked="goodsData.isFavorite"
           :like-loading="favoriteLoading"
@@ -49,13 +49,13 @@
             @add-to-cart="handleAddToCart"
           />
 
-          <LikeButton
+          <GoodsLikeButton
             :is-liked="goodsData.isFavorite"
             :loading="favoriteLoading"
             @toggle-like="handleToggleLike"
           />
 
-          <CompareButton
+          <GoodsCompareButton
             class="ml-3"
             @toggle-compare="handleToggleCompare"
           />

@@ -16,7 +16,7 @@
       </div>
 
       <div class="absolute top-3 right-3">
-        <LikeButton
+        <GoodsLikeButton
           v-if="isMobile"
           :is-liked="props.isLiked"
           :loading="props.likeLoading"
@@ -61,7 +61,6 @@
 
 <script lang="ts" setup>
 import type { ImageViewerInstance } from 'element-plus'
-import ThumbnailCarousel from './ThumbnailCarousel.vue'
 import { useScreenBreakpoints } from '@/composables/useScreenBreakpoints'
 
 const props = withDefaults(defineProps<{
