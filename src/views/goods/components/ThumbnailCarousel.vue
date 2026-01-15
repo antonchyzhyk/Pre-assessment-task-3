@@ -1,8 +1,7 @@
 <template>
   <div
     ref="containerRef"
-    class="carousel flex gap-2 md:gap-4 overflow-x-auto justify-between
-           snap-x snap-mandatory scroll-smooth w-full"
+    class="carousel flex gap-2 md:gap-[18px] overflow-x-auto snap-x snap-mandatory scroll-smooth w-full"
   >
     <button
       v-for="(image, index) in images"
