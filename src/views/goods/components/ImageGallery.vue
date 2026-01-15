@@ -79,13 +79,13 @@ defineEmits(['toggle-like'])
 
 const mainCarouselRef = useTemplateRef('mainCarouselRef')
 const toolbarCarouselRef = useTemplateRef('toolbarCarouselRef')
+const imageViewerRef = useTemplateRef<ImageViewerInstance | null>('imageViewerRef')
 
 const { isMobile } = useScreenBreakpoints()
 
 const selectedIndex = ref(props.initialIndex)
 const showPreview = ref(false)
 
-const imageViewerRef = ref<ImageViewerInstance | null>(null)
 const imagesKeyForTransition = computed(() => props.images.join('|'))
 
 const selectedImage = computed(() => props.images[selectedIndex.value])
