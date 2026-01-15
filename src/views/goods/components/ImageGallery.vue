@@ -5,14 +5,15 @@
             overflow-hidden flex items-center justify-center cursor-zoom-in transition-all duration-200"
       @click="openPreview"
     >
-      <transition name="fade" mode="out-in">
-        <el-image
-          :key="`${imagesKeyForTransition}-${selectedIndex}`"
-          :src="selectedImage"
-          fit="contain"
-          class="max-w-[645px] max-h-[325px] flex items-center justify-center px-[16px] py-[18px] sm:p-0"
-        />
-      </transition>
+      <div class="max-w-[645px] max-h-[325px] flex items-center justify-center px-[16px] py-[18px] sm:p-0">
+        <transition name="fade" mode="out-in">
+          <el-image
+            :key="`${imagesKeyForTransition}-${selectedIndex}`"
+            :src="selectedImage"
+            fit="contain"
+          />
+        </transition>
+      </div>
 
       <div class="absolute top-3 right-3">
         <LikeButton
