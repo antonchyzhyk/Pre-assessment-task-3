@@ -6,7 +6,7 @@
     <button
       v-for="(image, index) in images"
       :key="index"
-      class="carousel-item group flex-shrink-0 snap-start md:snap-align-none p-[12px]
+      class="carousel-item group flex-shrink-0 snap-start md:snap-align-none py-[12px] px-2 md:px-[12px]
              w-[66px] h-[66px] md:w-[100px] md:h-[100px] flex items-center justify-center
              rounded-xl overflow-hidden border border-neutral-100 transition-all duration-200
              bg-neutral hover:border-secondary-600 hover:bg-neutral-200"
