@@ -21,7 +21,7 @@
         />
 
         <div
-          class="w-full flex mb-[24px] flex-wrap sm:gap-[13px] gap-2"
+          class="w-full flex mb-[24px] flex-wrap sm:gap-[13px] gap-[9px]"
         >
           <GoodsColorCard
             v-for="(variant, index) in goodsData.colorVariants"
