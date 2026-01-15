@@ -16,12 +16,6 @@ class GoodsService {
     }
   }
 
-  async getFavoriteStatus (productId: number): Promise<boolean> {
-    await new Promise(resolve => setTimeout(resolve, 200))
-
-    return productId === 123
-  }
-
   async addToCart (params: {
     productId: number
     size: IShoeSize
