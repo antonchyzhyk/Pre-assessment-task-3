@@ -2,17 +2,17 @@
   <GoodsSkeleton v-if="loading" />
 
   <template v-else-if="goodsData">
-    <div class="flex flex-col items-center xl:items-start xl:flex-row xl:gap-[50px] gap-[24px]">
-      <section class="xl:max-w-[690px] w-full mx-auto">
+    <section class="flex flex-col items-center xl:items-start xl:flex-row xl:gap-[50px] gap-[24px]">
+      <div class="xl:max-w-[690px] w-full mx-auto">
         <ImageGallery
           :images="currentImages"
           :is-liked="goodsData.isFavorite"
           :like-loading="favoriteLoading"
           @toggle-like="handleToggleLike"
         />
-      </section>
+      </div>
 
-      <section class="w-full xl:max-w-[690px] mx-auto lg:max-w-none xl:flex-1 text-brand-800">
+      <div class="w-full xl:max-w-[690px] mx-auto lg:max-w-none xl:flex-1 text-brand-800">
         <GoodsMainInfoSection
           :name="goodsData.name"
           :price="goodsData.price.value"
@@ -60,8 +60,8 @@
             @toggle-compare="handleToggleCompare"
           />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <section class="w-full mt-[48px] pb-[100px]">
       <GoodsInfoCard
