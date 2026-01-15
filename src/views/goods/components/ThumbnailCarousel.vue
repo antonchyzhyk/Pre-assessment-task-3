@@ -12,7 +12,7 @@
              bg-neutral hover:border-secondary-600 hover:bg-neutral-200"
       :class="[
         selectedIndex === index
-          ? 'border-secondary-600 !bg-neutral-200 shadow-md border-[1.5px]'
+          ? 'border-secondary-600 !bg-neutral-200 border-[1.5px]'
           : 'border-transparent'
       ]"
       @click="handleSelect(index)"
