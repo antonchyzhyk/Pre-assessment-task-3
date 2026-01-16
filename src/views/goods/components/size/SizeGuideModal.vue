@@ -59,5 +59,6 @@
 
 <script setup lang="ts">
 import IconClose from '~icons/icon/close'
+
 const { isOpen, closeModal } = useModals()
 </script>
