@@ -5,7 +5,7 @@
   --el-border-radius-base: 8px;
 
   &.is-plain {
-    --el-button-bg-color: theme('colors.white');
+    --el-button-bg-color: transparent;
     --el-button-hover-bg-color: theme('colors.neutral-200');
     --el-button-active-bg-color: theme('colors.neutral-200');
     --el-button-disabled-bg-color: theme('colors.slate-gray-100');
