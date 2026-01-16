@@ -20,6 +20,7 @@
       <el-image
         :src="image"
         fit="contain"
+        alt="goods image"
         class="w-full h-full pointer-events-none group-hover:scale-[1.01] transition-all duration-200"
         loading="lazy"
       />

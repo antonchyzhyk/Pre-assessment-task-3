@@ -11,6 +11,7 @@
             :key="`${imagesKeyForTransition}-${selectedIndex}`"
             :src="selectedImage"
             fit="contain"
+            alt="goods main image"
           />
         </transition>
       </div>

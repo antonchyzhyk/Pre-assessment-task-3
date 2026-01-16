@@ -20,6 +20,7 @@
     >
       <el-image
         :src="thumbnail"
+        alt="goods image"
         fit="contain"
         class="w-full h-full pointer-events-none"
         :class="{ 'group-hover:scale-[1.01] transition-all duration-200': isInStock,

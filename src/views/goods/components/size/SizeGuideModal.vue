@@ -49,6 +49,7 @@
       <div class="w-[225px] h-[156px] flex-shrink-0 order-1 lg:order-2">
         <el-image
           class="w-full h-full"
+          alt="size guide image"
           src="/src/assets/images/other/leg-with-size.png"
           fit="contain"
         />
