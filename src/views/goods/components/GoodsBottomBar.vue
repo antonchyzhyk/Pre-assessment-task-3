@@ -1,7 +1,7 @@
 <template>
   <div class="sticky bottom-0 px-[16px] py-[24px] w-full bg-white z-10">
     <div class="flex gap-3">
-      <AddToCartButton
+      <GoodsAddToCartButton
         class="flex-1"
         :loading="addToCartLoading"
         :quantity="cartQuantity"

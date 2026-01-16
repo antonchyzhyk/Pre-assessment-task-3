@@ -42,7 +42,7 @@
           v-if="!isMobile"
           class="flex mt-[36px]"
         >
-          <AddToCartButton
+          <GoodsAddToCartButton
             class="flex-1"
             :loading="addToCartLoading"
             :quantity="currentColorCartQuantity"
