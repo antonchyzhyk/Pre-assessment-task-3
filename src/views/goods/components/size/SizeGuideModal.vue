@@ -21,7 +21,7 @@
 
     <p class="text-[22px] leading-[28px] font-bold text-brand-800 mb-[12px]">How to measure shoe size?</p>
 
-    <div class="flex lg:flex-row flex-col text-brand-800 items-center justify-between">
+    <div class="flex lg:flex-row flex-col text-brand-800 items-center justify-between gap-[24px]">
       <div class="flex flex-col gap-[22px] order-2 lg:order-1">
         <p>
           Follow the simple steps below to determine your shoe size.
@@ -29,7 +29,7 @@
           the right size (feet typically swell during the day).
         </p>
 
-        <ol class="list-decimal list-inside text-sm tracking-[0.25px] font-normal">
+        <ol class="list-decimal list-outside pl-[24px] text-sm tracking-[0.25px] font-normal">
           <li>
             Put a piece of blank paper under your feet.
             Stand up straight and have your heel lightly touching against the wall.
